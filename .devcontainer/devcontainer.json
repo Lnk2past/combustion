@@ -1,0 +1,24 @@
+{
+  "image": "gcc:13.2.0",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
+        "VisualStudioExptTeam.vscodeintellicode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.default.cppStandard": "c++20",
+      }
+    }
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/root/.local/bin"
+  },
+  "onCreateCommand": "apt update && apt install cmake gdb pipx -y",
+  "updateContentCommand": "pipx install conan && conan config install .devcontainer/.conan/ -tf profiles"
+}

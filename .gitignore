@@ -1,0 +1,15 @@
+# cmake
+build
+CMakeUserPresets.json
+
+# vscode
+.vscode/settings.json
+
+# c++
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+*.d
+*.dep

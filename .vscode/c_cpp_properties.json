@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "compilerPath": "/usr/local/bin/g++",
+            "intelliSenseMode": "linux-gcc-x86",
+            "includePath": [
+                "./src",
+                "/usr/include",
+                "/usr/include/c++/12"
+            ],
+            "cppStandard": "c++20",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json"
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}
