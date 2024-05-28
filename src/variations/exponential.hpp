@@ -2,12 +2,13 @@
 
 #include "variations/variation.hpp"
 
-struct Sinusoidal : public Variation
+struct Exponential : public Variation
 {
-    Sinusoidal() = default;
+    Exponential() = default;
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return {std::sin(point[0]), std::sin(point[1])};
+        const auto e_to_xm1 = std::exp(x - 1);
+        return {e_to_xm1 * std::cos(pi * y), e_to_xm1 * std::sin(pi * y)};
     }
 };

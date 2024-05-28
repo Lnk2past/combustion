@@ -2,12 +2,14 @@
 
 #include "variations/variation.hpp"
 
-struct Sinusoidal : public Variation
+struct Fisheye : public Variation
 {
-    Sinusoidal() = default;
+    Fisheye() = default;
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return {std::sin(point[0]), std::sin(point[1])};
+        const auto r = std::sqrt(x * x + y * y);
+        const auto coeff = 2.0 / (r + 1.0);
+        return {coeff * y, coeff * x};
     }
 };

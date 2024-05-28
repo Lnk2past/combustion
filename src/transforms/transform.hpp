@@ -14,7 +14,7 @@ public:
     ~Transform();
     auto operator=(const Transform &o) -> Transform &;
 
-    auto compute(const std::array<double, 4> &xyc) const -> std::array<double, 4>;
+    auto compute(const std::array<double, 4> &point) const -> std::array<double, 4>;
 
     auto add_variation(Variation *variation) -> void;
 

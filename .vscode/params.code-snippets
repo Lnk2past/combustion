@@ -1,0 +1,63 @@
+{
+	// Place your combustion workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"get_r": {
+		"scope": "cpp",
+		"prefix": "get_r",
+		"body": "const auto r = std::sqrt(x * x + y * y);"
+	},
+	"get_r2": {
+		"scope": "cpp",
+		"prefix": "get_r2",
+		"body": "const auto r2 = x * x + y * y;"
+	},
+	"get_one_over_r": {
+		"scope": "cpp",
+		"prefix": "get_one_over_r",
+		"body": "const auto one_over_r = 1.0 / std::sqrt(x * x + y * y);"
+	},
+	"get_theta": {
+		"scope": "cpp",
+		"prefix": "get_theta",
+		"body": "const auto theta = std::atan(x / y);"
+	},
+	"get_theta_over_pi": {
+		"scope": "cpp",
+		"prefix": "get_theta_over_pi",
+		"body": "const auto theta_over_pi = std::atan(x / y) / pi;"
+	},
+	"get_phi": {
+		"scope": "cpp",
+		"prefix": "get_phi",
+		"body": "const auto theta = std::atan(y / x);"
+	},
+	"get_omega": {
+		"scope": "cpp",
+		"prefix": "get_omega",
+		"body": "const auto omega = std::bernoulli_dsitribution{}(std::random_device{}());"
+	},
+	"get_delta": {
+		"scope": "cpp",
+		"prefix": "get_delta",
+		"body": "const auto delta = std::bernoulli_dsitribution{}(std::random_device{}());"
+	},
+	"get_psi": {
+		"scope": "cpp",
+		"prefix": "get_psi",
+		"body": "const auto psi = std::uniform_real_distribution<double>{0.0, 1.0}(std::random_device{}());"
+	}
+}

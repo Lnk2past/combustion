@@ -1,18 +1,15 @@
 #pragma once
 
-#include <array>
-#include <cmath>
-
 #include "variations/variation.hpp"
 
 struct Popcorn : public Variation
 {
     Popcorn() = default;
 
-    auto compute(const double, const double, const double c, const double, const double, const double f, const std::array<double, 4> &xyc) const -> std::array<double, 4> const
+    auto compute(const double, const double, const double c, const double, const double, const double f, const double x, const double y) const -> std::array<double, 2> const
     {
         return {
-            xyc[0] + c * std::sin(std::tan(3.0 * xyc[1])),
-            xyc[1] + f * std::sin(std::tan(3.0 * xyc[0]))};
+            x + c * std::sin(std::tan(3.0 * y)),
+            y + f * std::sin(std::tan(3.0 * x))};
     }
 };

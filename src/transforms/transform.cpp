@@ -44,20 +44,20 @@ auto Transform::operator=(const Transform &o) -> Transform &
     return *this;
 }
 
-auto Transform::compute(const std::array<double, 4> &xyc) const -> std::array<double, 4>
+auto Transform::compute(const std::array<double, 4> &point) const -> std::array<double, 4>
 {
-    const auto x = a * xyc[0] + b * xyc[1] + c;
-    const auto y = d * xyc[0] + e * xyc[1] + f;
-    auto result = std::array<double, 4>{x, y};
+    const auto x = a * point[0] + b * point[1] + c;
+    const auto y = d * point[0] + e * point[1] + f;
+    auto result = std::array<double, 4>{};
     for (const auto &v : variations)
     {
-        auto value = v->compute(a, b, c, d, e, f, xyc);
+        auto value = v->compute(a, b, c, d, e, f, point[0], point[1]);
         result[0] += value[0];
         result[1] += value[1];
     }
 
-    result[2] = (xyc[2] + color) / 2.0;
-    result[3] = xyc[3] + 1.0;
+    result[2] = (point[2] + color) / 2.0;
+    result[3] = point[3] + 1.0;
 
     return result;
 }

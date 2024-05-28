@@ -2,12 +2,12 @@
 
 #include "variations/variation.hpp"
 
-struct Sinusoidal : public Variation
+struct Cosine : public Variation
 {
-    Sinusoidal() = default;
+    Cosine() = default;
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return {std::sin(point[0]), std::sin(point[1])};
+        return {std::cos(pi * x) * std::cosh(y), std::sin(pi * x) * std::sinh(y)};
     }
 };
