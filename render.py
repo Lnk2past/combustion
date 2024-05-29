@@ -3,11 +3,11 @@ from contextlib import contextmanager
 import colorcet as cc
 import datashader as ds
 import holoviews as hv
-import matplotlib as mpl
 import numpy as np
 import pandas as pd
 import panel as pn
 import param
+
 
 from holoviews.operation.datashader import datashade, rasterize, shade, dynspread, spread
 from holoviews.operation.resample import ResampleOperation2D
@@ -15,7 +15,6 @@ from holoviews.operation import decimate
 
 from panel.viewable import Viewer
 
-mpl.use('agg')
 hv.extension('bokeh')
 
 import combustion
@@ -103,11 +102,11 @@ dynspread.threshold=1.0
 
 pn.Row(
     pn.Column(iterations_slider, alpha_toggle, transforms, transform_editor),
-    dynspread(datashade(
+    datashade(
         dmap,
         cmap='plasma',
         cnorm='log',
         height=640,
         width=640
-    ).opts(xlim=(-1, 1), ylim=(-1, 1)).opts(height=640, width=640, bgcolor='black'))).servable()
+    ).opts(xlim=(-1, 1), ylim=(-1, 1)).opts(height=640, width=640, bgcolor='black')).servable()
     # ).opts(fig_inches=5, bgcolor='black')).servable()

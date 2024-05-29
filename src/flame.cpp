@@ -7,17 +7,6 @@
 
 auto Flame::compute(const int iterations, std::vector<Transform> &transforms) -> std::vector<std::array<double, 4>>
 {
-    // auto t1 = Transform();
-    // auto v1 = Halve();
-    // t1.add_variation(&v1);
-    // auto t2 = Transform();
-    // auto v2 = Sierpinkski1();
-    // t2.add_variation(&v2);
-    // auto t3 = Transform();
-    // auto v3 = Sierpinkski2();
-    // t3.add_variation(&v3);
-    // transforms = {t1, t2, t3};
-
     auto engine = std::mt19937{1337};
     auto unit_distribution = std::uniform_real_distribution{0.0, 1.0};
     auto biunit_distribution = std::uniform_real_distribution{-1.0, 1.0};
