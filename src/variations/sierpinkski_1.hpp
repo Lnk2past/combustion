@@ -8,6 +8,6 @@ struct Sierpinkski1 : public Variation
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return {(point[0] + 1) / 2, point[1] / 2};
+        return {(x + 1.0) / 2.0, y / 2.0};
     }
 };

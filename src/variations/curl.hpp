@@ -2,9 +2,9 @@
 
 #include "variations/variation.hpp"
 
-struct NAME : public Variation
+struct Curl : public Variation
 {
-    NAME() = default;
+    Curl() = default;
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {

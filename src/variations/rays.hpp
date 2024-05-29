@@ -2,9 +2,9 @@
 
 #include "variations/variation.hpp"
 
-struct NAME : public Variation
+struct Rays : public Variation
 {
-    NAME() = default;
+    Rays() = default;
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {

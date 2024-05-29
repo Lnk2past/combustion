@@ -8,6 +8,6 @@ struct Linear : public Variation
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return point;
+        return {x, y};
     }
 };

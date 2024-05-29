@@ -51,7 +51,7 @@ auto Transform::compute(const std::array<double, 4> &point) const -> std::array<
     auto result = std::array<double, 4>{};
     for (const auto &v : variations)
     {
-        auto value = v->compute(a, b, c, d, e, f, point[0], point[1]);
+        auto value = v->compute(a, b, c, d, e, f, x, y);
         result[0] += value[0];
         result[1] += value[1];
     }

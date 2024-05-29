@@ -48,16 +48,16 @@
 	"get_omega": {
 		"scope": "cpp",
 		"prefix": "get_omega",
-		"body": "const auto omega = std::bernoulli_dsitribution{}(std::random_device{}());"
+		"body": "const auto omega = std::bernoulli_dsitribution{}(std::random_device{});"
 	},
 	"get_delta": {
 		"scope": "cpp",
 		"prefix": "get_delta",
-		"body": "const auto delta = std::bernoulli_dsitribution{}(std::random_device{}());"
+		"body": "const auto delta = std::bernoulli_dsitribution{}(std::random_device{});"
 	},
 	"get_psi": {
 		"scope": "cpp",
 		"prefix": "get_psi",
-		"body": "const auto psi = std::uniform_real_distribution<double>{0.0, 1.0}(std::random_device{}());"
+		"body": "const auto psi = std::uniform_real_distribution<double>{0.0, 1.0}(std::random_device{});"
 	}
 }

@@ -8,6 +8,6 @@ struct Sinusoidal : public Variation
 
     auto compute(const double, const double, const double, const double, const double, const double, const double x, const double y) const -> std::array<double, 2> const
     {
-        return {std::sin(point[0]), std::sin(point[1])};
+        return {std::sin(x), std::sin(y)};
     }
 };
